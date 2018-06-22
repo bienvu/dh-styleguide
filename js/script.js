@@ -8,8 +8,8 @@
   // Add  functionality here.
 
   $(document).ready(function() {
-    // if($('.landing').length) {
-      $('as').multiscroll({
+    if($('.landing').length) {
+      $('.landing').multiscroll({
         verticalCentered: true,
         scrollingSpeed: 400,
         easing: 'easeInQuart',
@@ -24,7 +24,7 @@
         keyboardScrolling: true,
         touchSensitivity: 5
       });
-    // }
+    }
 
      //Rote title
      var strings = [],
