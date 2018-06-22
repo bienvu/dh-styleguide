@@ -15,7 +15,7 @@
         easing: 'easeInQuart',
         menu: false,
         navigation: false,
-        loopBottom: true,
+        loopBottom: false,
         loopTop: true,
         css3: true,
         paddingTop: 0,
@@ -52,15 +52,23 @@
       var $this = $(this);
       $this.click(function (ev) {
 
-        if (!$this.hasClass('is-active')) {
-          $('.js-change-page').removeClass('is-active');
-          $(this).addClass('is-active');
+        if (!$this.hasClass('bg-active')) {
+          $('.js-change-page').removeClass('bg-active');
+          $(this).addClass('bg-active');
           var page  = $(ev.target).attr("data-page-name");
           var trans = $(ev.target).attr("data-page-trans");
-          if ($(".screen").page().fetch(page) === null)
-              $(".screen").page().shake();
-          else
-              $(".screen").page().transition(page, trans);
+          $(".screen").page().transition(page, trans);
+          // if ($(".screen").page().fetch(page) === null)
+          //     $(".screen").page().shake();
+          // else
+          //     $(".screen").page().transition(page, trans);
+
+          // $('.js-slide').each(function() {
+          //   $(this).not('.slick-initialized').slick({
+          //     infinite: true,
+          //     autoplay: true,
+          //   });
+          // });
         }
         return false;
       });
@@ -69,8 +77,8 @@
     // Slider
     $('.js-slide').each(function() {
       $(this).not('.slick-initialized').slick({
-        infinite: false,
-        autoplay: true,
+        infinite: true,
+        autoplay: false,
       });
     });
 
@@ -78,9 +86,17 @@
     $('.js-slide-circle').each(function() {
       $(this).not('.slick-initialized').slick({
         infinite: true,
-        autoplay: true,
+        autoplay: false,
       });
     });
+
+    // Rotate text.
+    if($(".js-rotating").length) {
+      $(".js-rotating").Morphext({
+        animation: "bounceInDown", // Overrides default "bounceIn"
+        speed: 2000, // Overrides default 2000
+      });
+    }
   });
 
 }(this, this.document, this.jQuery));

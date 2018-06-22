@@ -1,6 +1,10 @@
 .box-slide-content {
   max-width: 600px;
   margin: 0 auto;
+
+  .slick-prev {
+    display: none !important;
+  }
   
   &__item {
     display: flex !important;

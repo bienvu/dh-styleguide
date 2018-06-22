@@ -7,10 +7,14 @@
     top: 50%;
     transform: translate(0, -50%);
     z-index: 9999;
-    padding: 4px 8px;
     cursor: pointer;
     font-size: 24px;
-    line-height: .7;
+
+    span {
+      padding: 4px 8px;
+      line-height: .7;
+      display: inline-block;
+    }
 
     &:before {
       content: '>';
@@ -21,14 +25,15 @@
       transform: rotate(270deg);
     }
 
-    &.objects {
+    &.objects,
+    &.top {
       position: fixed;
       top: 57px;
       left: 50%;
       transform: translate(-50%, 0);
 
       &:before {
-        top: -22px;
+        top: -30px;
         margin-left: -2px;
       }
     }
@@ -43,12 +48,33 @@
       }
     }
 
+    &.bio {
+      left: 57px;
+      transform: rotate(-90deg);
+
+      &:before {
+        top: -32px;
+        margin-left: -8px;
+      }
+    }
+
     &.commissions {
       right: -15px;
       transform: rotate(-90deg);
 
       &:before {
-        top: 42px;
+        top: 38px;
+        transform: rotate(-270deg);
+        margin-left: -8px;
+      }
+    }
+
+    &.exhibit {
+      right: 30px;
+      transform: rotate(-90deg);
+
+      &:before {
+        top: 38px;
         transform: rotate(-270deg);
         margin-left: -8px;
       }
@@ -89,6 +115,68 @@
 
   &__nav {
     text-transform: uppercase;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    .expand {
+      &:hover {
+        ul {
+          transition: .5s;
+          top: -94px;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      ul {
+        position: absolute;
+        left: 65px;
+        top: 0;
+        transform: rotate(90deg);
+        font-size: 12px;
+        line-height: 1.4;
+        text-transform: capitalize;
+        color: #e1bbba;
+        margin: 0;
+        z-index: 1;
+        transition: .5s;
+        visibility: hidden;
+        opacity: 0;
+
+        &:before {
+          position: absolute;
+          content: '';
+          left: -50px;
+          top: -50px;
+          display: inline-block;
+          width: 136px;
+          height: 200px;
+        }
+
+        li {
+          margin-bottom: 5px;
+          position: relative;
+          z-index: 2;
+
+          &:before {
+            content: '';
+            position: absolute;
+            right: -24px;
+            width: 4px;
+            height: 4px;
+            background-color: #ed2024;
+            top: 50%;
+            margin-top: -2px;
+          }
+        }
+      }
+    }
+
+    li {
+      list-style: none;
+    }
   }
 
   &__footer {
@@ -104,6 +192,7 @@
       z-index: 99;
       text-transform: uppercase;
       justify-content: flex-end;
+      list-style: none;
     }
 
     .instagram {
@@ -146,10 +235,25 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: #fff;
   }
 }
 
 .content-inner {
   max-width: 788px;
-  width: 100%
+  width: 100%;
+  // padding-top: 35px;
+  max-height: calc(100% - 240px);
+  overflow-y: auto;
+}
+
+.denholm,
+.object-specific {
+  .content-inner {
+    overflow: inherit;
+  }
+}
+
+.bg-active {
+  background: #f9f1f1;
 }

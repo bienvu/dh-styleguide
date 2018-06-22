@@ -15,44 +15,16 @@
   <body class="landing-page">
     <div id="barba-wrapper" class="wrapper">
       <div class="barba-container" data-namespace="homepage">
-        {# {% include 'landing.twig' %} #}
-        {# <div class="page-transition__wrap">
-          <div class="page-transition__nav">
-            <div class="js-change-page nav arrow arrow-left" data-page-name="first" data-page-trans="slide-in-from-right">What?</div>
-            <div class="js-change-page nav arrow arrow-right" data-page-name="second" data-page-trans="slide-in-from-left">Commissions</div>
-          </div>
-        </div>
-        <div class="page-transition__content">
-          <div class="screen">
-            <div>
-              <div class="page-transition__item" data-jquery-page-name="first">
-                {% include '../components/landing.twig' %}
-              </div>
-              <div class="page-transition__item" data-jquery-page-name="second">
-                {% include '../components/landing.twig' %}
-              </div>
-              <div class="page-transition__item" data-jquery-page-name="third">
-                {% include '../components/landing.twig' %}
-              </div>
-            </div>
-          </div>
-        </div> #}
-        <div class="pt-triggers">
-          <div class="dl-menuwrapper dl-menu">
-            <ul class="dl-menu arrow">
-            <li data-animation="1" class="left"><span class="arrow-left">Move to left/ from right</span></li>
-            <li data-animation="2" class="right"><span class="arrow-right">Move to right/ from left</span></li>
-            </ul>
-          </div>
-        </div>
-        <div class="pt-perspective pt-main">
-          <div class="pt-page pt-page-1 pt-page-current"><div id="js-scroll1">{% include '../components/landing.twig' %}</div></div>
-          <div class="pt-page pt-page-2"><div id="js-scroll2">{% include '../components/landing.twig' %}</div></div>
-          <div class="pt-page pt-page-3"><div id="js-scroll3">{% include '../components/landing.twig' %}</div></div>
+        {% include '../components/landing.twig' %}
+        <div class="next-page">
+          <div class="arrow-btn arrow-left">Prev</div>
+          <div class="arrow-btn arrow-right">Next</div>
         </div>
       </div>
     </div>
   <script src="../js/lib/slick.min.js?{{ cacheBuster }}"></script>
+  <script src="../js/lib/morphext.js?{{ cacheBuster }}"></script>
+  <script src="../js/lib/jquery.rotator.js?{{ cacheBuster }}"></script>
   <script src="../js/lib/jquery.page.min.js?{{ cacheBuster }}"></script>
   <script src="../js/lib/barba.min.js?{{ cacheBuster }}"></script>
   <script src="../js/lib/modernizr.custom.js?{{ cacheBuster }}"></script>

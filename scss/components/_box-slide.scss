@@ -13,10 +13,6 @@
   font-size: 0;
   color: transparent;
 
-  &.slick-disabled {
-    display: none !important;
-  }
-
   &:hover {
     background-color: transparent;
   }
@@ -36,5 +32,42 @@
 }
 
 .box-slide {
+  position: relative;
   padding: 0 23px;
+
+  .slick-track {
+    width: 2000px;
+  }
+
+  &__item {
+    min-width: 742px;
+    float: left;
+    text-align: center;
+
+    img {
+      display: inline-block;
+    }
+  }
+
+  &__exhibit {
+    padding: 0 85px;
+
+    .box-slide__item {
+      min-width: inherit;
+    }
+
+    img {
+      max-width: 322px;
+    }
+
+    .box-info {
+      position: absolute;
+      bottom: 0;
+      left: -150px;
+
+      &__item {
+        margin-bottom: 0;
+      }
+    }
+  }
 }

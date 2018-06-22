@@ -1,12 +1,12 @@
-.pt-page {
-  opacity: 0;
-  visibility: hidden;
-
-  &.pt-page-current {
-    opacity: 1;
-    visibility: visible;
-  }
-}
+// .pt-page {
+//   opacity: 0;
+//   visibility: hidden;
+//
+//   &.pt-page-current {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+// }
 
 .landing {
   h1 {
@@ -32,6 +32,10 @@
 
   .ms-section {
     text-align: center;
+  }
+
+  a {
+    color: $white;
   }
 }
 
@@ -192,108 +196,29 @@
   }
 }
 
-.pt-triggers {
-  .dl-menu {
-    li {
-      list-style: none;
-      position: fixed;
-      top: 50%;
-      transform: translate(0, -50%);
-      z-index: 9999;
-
-      &.top {
-        position: fixed;
-        top: 10px;
-        left: 50%;
-        transform: translate(-50%, 0);
-      }
-
-      &.left {
-        left: 15px;
-      }
-
-      &.right {
-        right: 15px;
-      }
-    }
-
-    &.arrow li {
-      display: flex;
-      align-items: center;
-
-      .arrow-left {
-        background: url('../images/arrow-left.png') no-repeat scroll 0 0 transparent;
-        background-size: 100% auto;
-      }
-
-      .arrow-right {
-        background: url('../images/arrow-right.png') no-repeat scroll 0 0 transparent;
-        background-size: 100% auto;
-      }
-
-      span {
-        text-indent: -999em;
-        font-size: 0;
-        width: 27px;
-        height: 27px;
-        display: inline-block;
-        cursor: pointer;
-      }
-    }
-
-    &.footer {
-      position: fixed;
-      bottom: 40px;
-      right: 50px;
-      display: flex;
-      align-items: center;
-      z-index: 99;
-
-      li {
-        position: relative;
-        margin-left: 20px;
-        text-transform: uppercase;
-
-        a {
-          color: $text-color;
-
-          &:hover {
-            color: $primary-color;
-          }
-        }
-      }
-    }
-  }
-}
-
-
-
-
-.pt-main {
-  .pt-page__inner {
-    width: 800px;
-    position: absolute;
-    left: 50%;
+.next-page {
+  .arrow-btn {
+    text-indent: -999em;
+    font-size: 0;
+    width: 27px;
+    height: 27px;
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0, -50%);
+    z-index: 9999;
   }
-}
 
-.pt-page {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    visibility: hidden;
-    overflow: hidden;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+  .arrow-left {
+    background: url('../images/arrow-left.png') no-repeat scroll 0 0 transparent;
+    background-size: 100% auto;
+    left: 15px;
+  }
+
+  .arrow-right {
+    background: url('../images/arrow-right.png') no-repeat scroll 0 0 transparent;
+    background-size: 100% auto;
+    right: 15px;
+  }
 }

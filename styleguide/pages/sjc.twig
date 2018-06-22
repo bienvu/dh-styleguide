@@ -1,5 +1,101 @@
-<div id="barba-wrapper" class="wrapper">
-  <div class="barba-container">
-    <a class="next" href="/pattern-lab/public/patterns/01-components-landing-landing-page/01-components-landing-landing-page.html">back to home page</a>
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>{{ site_title }} - {% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="../css/animations.css?{{ cacheBuster }}" media="all" />
+    <link rel="stylesheet" href="../css/jquery.multiscroll.css?{{ cacheBuster }}" media="all" />
+    <link rel="stylesheet" href="../css/styles.css?{{ cacheBuster }}" media="all" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?{{ cacheBuster }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.1/TweenMax.min.js"></script>
+  </head>
+  <body class="denholm">
+    <div id="barba-wrapper" class="wrapper">
+      <div class="barba-container page-transition" data-namespace="denholm">
+        <div class="page-transition__wrap">
+          <div class="page-transition__logo"><a href="#" class="js-change-page sjc-logo is-active" data-page-name="home" data-page-trans="slide-in-from-bottom">Steven<br> John<br> Clark</a></div>
+          <div class="page-transition__nav">
+            <ul>
+              <li class="bio nav"><span class="js-change-page" data-page-name="bio" data-page-trans="slide-in-from-right">BIO</span></li>
+              <li class="top nav"><span class="js-change-page" data-page-name="collaboorations" data-page-trans="slide-in-from-bottom">Collaboorations</span></li>
+              <li class="expand exhibit nav"><span class="js-change-page" data-page-name="exhibit" data-page-trans="slide-in-from-left">Exhibit</span>
+                <ul>
+                  <li><span class="js-change-page" data-page-name="early1" data-page-trans="slide-in-from-left">Early</span></li>
+                  <li><span class="js-change-page" data-page-name="early2" data-page-trans="slide-in-from-left">Early</span></li>
+                  <li><span class="js-change-page" data-page-name="early3" data-page-trans="slide-in-from-left">Early</span></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="page-transition__footer">
+            <div class="container">
+              <ul class="page-transition__footer__inner">
+                <li><span class="js-change-page nav" data-page-name="enquiries" data-page-trans="slide-in-from-top">Enquiries</span></li>
+                <li class="instagram" ><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-transition__content">
+          <div class="screen">
+            <div>
+              <div class="page-transition__item home" data-jquery-page-name="home">
+                <div class="content-inner">
+                {% include '../components/sjc-home.twig' %}
+                </div>
+              </div>
+              <div class="page-transition__item exhibit" data-jquery-page-name="exhibit">
+                <div class="content-inner">
+                    {% include '../components/sjc-exhibit.twig' %}
+                </div>
+              </div>
+              <div class="page-transition__item collaboorations" data-jquery-page-name="collaboorations">
+                <div class="content-inner">
+                    {% include '../components/sjc-collaboorations.twig' %}
+                </div>
+              </div>
+              <div class="page-transition__item enquiries" data-jquery-page-name="enquiries">
+                <div class="content-inner">
+                    {% include '../components/enquiries.twig' %}
+                </div>
+              </div>
+              <div class="page-transition__item bio" data-jquery-page-name="bio">
+                <div class="content-inner">
+                    {% include '../components/sjc-bio.twig' %}
+                </div>
+              </div>
+              <div class="page-transition__item early1" data-jquery-page-name="early1">
+                <div class="content-inner">
+                    {% include '../components/sjc-exhibit.twig' %}
+                </div>
+              </div>
+              <div class="page-transition__item early2" data-jquery-page-name="early2">
+                <div class="content-inner">
+                    {% include '../components/sjc-exhibit.twig' %}
+                </div>
+              </div>
+              <div class="page-transition__item early3" data-jquery-page-name="early3">
+                <div class="content-inner">
+                    {% include '../components/sjc-exhibit.twig' %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/lib/slick.min.js?{{ cacheBuster }}"></script>
+    <script src="../js/lib/jquery.page.min.js?{{ cacheBuster }}"></script>
+    <script src="../js/lib/barba.min.js?{{ cacheBuster }}"></script>
+    <script src="../js/lib/modernizr.custom.js?{{ cacheBuster }}"></script>
+    <script src="../js/lib/jquery.dlmenu.js?{{ cacheBuster }}"></script>
+    <script src="../js/lib/pagetransitions.js?{{ cacheBuster }}"></script>
+    <script src="../js/lib/jquery.easings.min.js?{{ cacheBuster }}"></script>
+    <script src="../js/lib/jquery.multiscroll.min.js?{{ cacheBuster }}"></script>
+    <script src="../js/nextprev.js?{{ cacheBuster }}"></script>
+    <script src="../js/script.js?{{ cacheBuster }}"></script>
+  </body>
+</html>
