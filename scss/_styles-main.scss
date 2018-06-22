@@ -1,0 +1,57 @@
+// STYLES-MAIN.SCSS
+
+// Please centralize all includes here.
+
+// WARNING: DO NOT EDIT /assets/css/styles.css file manually, this should be generated only by compiler based on this file.
+
+
+//Required imports
+@import '../.npm/bower_components/susy/sass/susy';
+
+// Variables
+@import 'base/variables';
+@import 'base/colors';
+
+//Helpers functions
+@import 'helpers/functions';
+@import 'helpers/mixins';
+
+// Reset
+@import 'base/reset';
+
+//Base
+@import 'base/fonts';
+// @import 'base/icons';
+@import 'base/grid';
+@import 'base/extends';
+@import 'base/typography';
+@import 'base/btn';
+@import 'base/form';
+@import 'base/table';
+
+//Helpers classes
+@import 'base/helpers';
+
+// Vendors
+@import 'vendors/slick';
+@import 'vendors/jquery-page';
+@import 'vendors/page-transition';
+
+// Components
+@import 'components/landing';
+@import 'components/box-slide';
+@import 'components/box-slide-content';
+@import 'components/box-product';
+@import 'components/form-enquiries';
+@import 'components/page-transition';
+@import 'components/object-specific';
+@import 'components/box-form';
+
+// Layouts
+@import 'layouts/layout';
+@import 'layouts/navigation';
+@import 'layouts/header';
+@import 'layouts/footer';
+
+// Pages
+// @import 'pages/index';

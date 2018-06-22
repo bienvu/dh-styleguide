@@ -1,0 +1,29 @@
+// COLORS
+// Define all color variables in this document
+// Use http://chir.ag/projects/name-that-color/ for naming a color.
+
+$black: #000;
+$white: #fff;
+$silver: #ccc;
+$pigeon-post: #aec9de;
+$pigeon-post-light: rgba($pigeon-post, .75);
+
+// Gray
+$gray: #808080;
+
+// Red
+$red: #8c1515;
+
+$blue: #112146;
+
+// Brand colors
+$primary-color: $blue;
+$text-color: $black;
+
+// Link color
+$link-color: $primary-color;
+$link-color-hover: lighten($primary-color, 25%);
+
+// Button color
+$btn-color: $primary-color;
+$btn-color-hover: lighten($primary-color, 25%);

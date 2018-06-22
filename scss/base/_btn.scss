@@ -1,0 +1,30 @@
+%btn,
+.btn {
+  @include aperto;
+  appearance: none;
+  background-image: none;
+  border-radius: 0;
+  border: rem(1px) solid $btn-color;
+  box-shadow: none;
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 12px;
+  line-height: 1;
+  outline: none;
+  padding: 8px 20px;
+  text-align: center;
+  text-shadow: none;
+  transition: all .3s ease;
+  background-color: $btn-color;
+  color: $text-color;
+  cursor: pointer;
+  font-weight: 700;
+  outline: 0;
+
+  &:active,
+  &:hover {
+    background-color: $btn-color-hover;
+    border-color: $btn-color-hover;
+    color: $text-color;
+  }
+}

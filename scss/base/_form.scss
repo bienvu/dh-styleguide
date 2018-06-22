@@ -1,0 +1,168 @@
+button,
+input[type='submit'] {
+  @extend .btn;
+}
+
+%form-text {
+  @include aperto;
+  appearance: none;
+  background-color: $white;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 2px solid $text-color;
+  box-shadow: inherit;
+  box-sizing: border-box;
+  color: $text-color;
+  font-weight: 400;
+  padding: 8px;
+  font-size: 12px;
+  text-transform: capitalize;
+  transition: all .3s ease-in-out;
+  width: 100%;
+
+  &::-ms-clear {
+    display: none;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $text-color;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: $text-color;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $text-color;
+    opacity: 1;
+  }
+
+  &:-moz-placeholder {
+    color: $text-color;
+    opacity: 1;
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: 0 none;
+  }
+
+  &.error {
+    border-color: $red;
+    color: $red;
+
+    &::-webkit-input-placeholder {
+      color: $red;
+    }
+
+    &::-moz-placeholder {
+      color: $red;
+    }
+
+    &:-ms-input-placeholder {
+      color: $red;
+    }
+
+    &:-moz-placeholder {
+      color: $red;
+    }
+
+    &:focus {
+      box-shadow: 0 0 rem(5px) rgba($red, 1);
+      outline: 0 none;
+    }
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+input[type='tel'],
+input[type='number'],
+input[type='text'],
+.form-url,
+.form-search,
+.form-email,
+.form-text {
+  @extend %form-text;
+}
+
+.form-textarea {
+  @extend %form-text;
+  height: auto;
+  min-height: 188px;
+  border: 1px solid #e0b8b7;
+  box-shadow: 0 0 1px 1px #e0b8b7;
+  margin-top: 33px;
+  margin-bottom: 8px;
+}
+
+.form-item,
+.form-actions {
+  margin:rem(0 0 4px);
+
+  &.form-type-checkbox,
+  &.form-type-radio {
+    margin-bottom: rem(8px);
+  }
+}
+
+.form-type-checkbox,
+.form-type-radio {
+  label {
+    font-weight: 400;
+  }
+}
+
+.fieldset-legend {
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: rem(8px);
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance:none;
+  background-color: $white;
+  background-image: url('../images/icon-down.png');
+  background-position: calc(100% - 15px) 50%;
+  background-repeat: no-repeat;
+  border: 0;
+  border-bottom: 2px solid $text-color;
+  padding: 8px;
+  font-size: 12px;
+  text-transform: capitalize;
+  margin-bottom: rem(10px);
+  padding: rem(5px 25px 5px 10px);
+  background-color: $white;
+  border-radius: 0;
+  width: 100%;
+  margin: 0;
+  height: 33px;
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: none;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  option {
+    width: 100%;
+  }
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}

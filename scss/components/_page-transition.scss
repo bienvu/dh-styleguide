@@ -1,0 +1,155 @@
+.page-transition {
+  width: 100%;
+
+  .nav {
+    list-style: none;
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 9999;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: .7;
+
+    &:before {
+      content: '>';
+      position: absolute;
+      color: red;
+      font-size: 24px;
+      left: 50%;
+      transform: rotate(270deg);
+    }
+
+    &.objects {
+      position: fixed;
+      top: 57px;
+      left: 50%;
+      transform: translate(-50%, 0);
+
+      &:before {
+        top: -22px;
+        margin-left: -2px;
+      }
+    }
+
+    &.what {
+      left: 28px;
+      transform: rotate(-90deg);
+
+      &:before {
+        top: -32px;
+        margin-left: -8px;
+      }
+    }
+
+    &.commissions {
+      right: -15px;
+      transform: rotate(-90deg);
+
+      &:before {
+        top: 42px;
+        transform: rotate(-270deg);
+        margin-left: -8px;
+      }
+    }
+
+    &.is-active {
+      background: #f9f1f1;
+    }
+  }
+  .arrow {
+    text-indent: -999em;
+    font-size: 0;
+    width: 27px;
+    height: 27px;
+    display: inline-block;
+    cursor: pointer;
+
+    &:before {
+      display: none;
+    }
+
+    &.is-active {
+      background-color: transparent;
+    }
+
+    &.arrow-left {
+      background: url('../images/arrow-left.png') no-repeat scroll 0 0 transparent;
+      background-size: 100% auto;
+      left: 30px;
+    }
+
+    &.arrow-right {
+      background: url('../images/arrow-right.png') no-repeat scroll 0 0 transparent;
+      background-size: 100% auto;
+      right: 30px;
+    }
+  }
+
+  &__nav {
+    text-transform: uppercase;
+  }
+
+  &__footer {
+    position: fixed;
+    bottom: 40px;
+    right: 0;
+    left: 0;
+    z-index: 99;
+
+    &__inner {
+      display: flex;
+      align-items: center;
+      z-index: 99;
+      text-transform: uppercase;
+      justify-content: flex-end;
+    }
+
+    .instagram {
+      font-size: 12px;
+      margin-left: 20px;
+      padding: 4px 13px;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: '';
+        background: url('../images/line.png') no-repeat scroll 0 0 transparent;
+        left: -18px;
+        bottom: -12px;
+        width: 21px;
+        height: 40px;
+        background-size: 100% auto;
+      }
+
+      a {
+        color: $text-color;
+      }
+    }
+
+    .nav {
+      position: relative;
+      top: 0;
+      transform: translate(0, 0);
+      font-size: 12px;
+      padding: 4px 13px;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+}
+
+.content-inner {
+  max-width: 788px;
+  width: 100%
+}

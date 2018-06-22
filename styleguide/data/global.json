@@ -1,0 +1,65 @@
+{
+  "site_title": "FFWvn Styleguide",
+  "img_path": "images-demo/",
+  "list_groups": [
+    {
+      "name":"basic",
+      "title": "Basic Elements"
+    },
+    {
+      "name":"helper",
+      "title":"Helper Classes"
+    },
+    {
+      "name":"component",
+      "title":"Components"
+    }
+  ],
+  "list_components":[
+    {
+      "name":"headings",
+      "group":"basic",
+      "hidecode":true
+    },
+    {
+      "name":"paragraphs",
+      "group":"basic"
+    },
+    {
+      "name":"inline-elements",
+      "group":"basic"
+    },
+    {
+      "name":"preformatted-text",
+      "group":"basic"
+    },
+    {
+      "name":"blockquote",
+      "group":"basic"
+    },
+    {
+      "name":"list",
+      "group":"basic"
+    },
+    {
+      "name":"table",
+      "group":"basic"
+    },
+    {
+      "name":"links",
+      "group":"basic"
+    },
+    {
+      "name":"form",
+      "group":"basic"
+    },
+    {
+      "name":"background",
+      "group":"helper"
+    },
+    {
+      "name":"button",
+      "group":"helper"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+// Texts
+.text {
+  &--center {
+    text-align: center;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  // Dark Colors
+  &--dark {
+    color: $text-color;
+  }
+
+  // Light Colors
+  &--white {
+    color: $white;
+
+    a {
+      @extend %link--white;
+    }
+  }
+}
+
+// Backgrounds
+.bg {
+  // Dark backgrounds
+  &--primary {
+    background-color: $primary-color;
+  }
+
+  // Light backgrounds
+  &--white {
+    background-color: $white;
+  }
+
+  // Pink
+  &--pink {
+    background-color: $pink-f3;
+  }
+
+  // Pink Dark
+  &--pink-dark {
+    background-color: $pink;
+  }
+
+  &--yellow {
+    background-color: $yellow;
+  }
+
+  &--blue {
+    background-color: $blue;
+  }
+}
+
+.title {
+  &--bottom {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    // font-size: 53.5px;
+
+
+    // @include susy-media(desktopSuperwide) {
+    //   font-size: 88.31px;
+    // }
+
+    &:before {
+      position: absolute;
+      border-bottom: 7px solid $white;
+      left: 0;
+      bottom: 0;
+      height: 10px;
+      width: 80px;
+      content: '';
+
+      @include susy-media(desktopSuperwide) {
+        border-width: 12px;
+        height: 10px;
+        width: 140px;
+      }
+    }
+  }
+
+  &--center{
+    position: relative;
+    display: inline-block;
+    // font-size: 52.25px;
+    color: $white;
+    text-align: right;
+
+    &:before {
+      position: absolute;
+      border-bottom: 7px solid $white;
+      left: -100px;
+      top: 50%;
+      height: 10px;
+      width: 100px;
+      content: '';
+      margin-top: -5px;
+
+      @include susy-media(desktopSuperwide) {
+        border-width: 12px;
+        left: -90px;
+        top: 50%;
+        height: 10px;
+        width: 125px;
+        content: '';
+        margin-top: -14px;
+      }
+    }
+  }
+}
+
+.denholm-logo {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  color: $text-color;
+  font-size: 40px;
+  font-weight: 700;
+  position: absolute;
+  top: 40px;
+  left: 127px;
+  z-index: 99;
+
+  // @include susy-media(desktopSuperwide) {
+  //   font-size: 86px;
+  //   top: 50px;
+  //   left: 50px
+  // }
+
+  &:hover {
+    color: $text-color;
+  }
+
+  &:before {
+    position: absolute;
+    border-bottom: 7px solid #e1bbba;
+    left: 8px;
+    bottom: -3px;
+    height: 7px;
+    width: 60px;
+    content: '';
+
+    // position: absolute;
+    // border-bottom: 7px solid $pink;
+    // left: 0;
+    // bottom: 0;
+    // height: 10px;
+    // width: 80px;
+    // content: '';
+
+    // @include susy-media(desktopSuperwide) {
+    //   border-width: 12px;
+    //   height: 10px;
+    //   width: 140px;
+    // }
+  }
+}

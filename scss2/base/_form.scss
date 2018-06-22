@@ -1,0 +1,118 @@
+button,
+input[type='submit'] {
+  @extend .btn;
+}
+
+%form-text {
+  @include helvetica;
+  appearance: none;
+  background-color: $white;
+  border-radius: 0;
+  border: rem(1px) solid $text-color;
+  box-shadow: inherit;
+  box-sizing: border-box;
+  color: $text-color;
+  font-size: rem(16px);
+  font-weight: 400;
+  height: rem(48px);
+  padding: rem(7px 20px);
+  transition: all .3s ease-in-out;
+  width: 100%;
+
+  &::-ms-clear {
+    display: none;
+  }
+
+  &::-webkit-input-placeholder {
+    color: lighten($text-color, 10%);
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: lighten($text-color, 10%);
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: lighten($text-color, 10%);
+    opacity: 1;
+  }
+
+  &:-moz-placeholder {
+    color: lighten($text-color, 10%);
+    opacity: 1;
+  }
+
+  &:focus {
+    box-shadow: 0 0 rem(5px) rgba($text-color, 1);
+    outline: 0 none;
+  }
+
+  &.error {
+    border-color: $red;
+    color: $red;
+
+    &::-webkit-input-placeholder {
+      color: $red;
+    }
+
+    &::-moz-placeholder {
+      color: $red;
+    }
+
+    &:-ms-input-placeholder {
+      color: $red;
+    }
+
+    &:-moz-placeholder {
+      color: $red;
+    }
+
+    &:focus {
+      box-shadow: 0 0 rem(5px) rgba($red, 1);
+      outline: 0 none;
+    }
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+input[type='tel'],
+.form-url,
+.form-search,
+.form-email,
+.form-text {
+  @extend %form-text;
+}
+
+.form-textarea {
+  @extend %form-text;
+  height: auto;
+  min-height: rem(200px);
+  padding: rem(15px 25px);
+}
+
+.form-item,
+.form-actions {
+  margin:rem(0 0 26px);
+
+  &.form-type-checkbox,
+  &.form-type-radio {
+    margin-bottom: rem(8px);
+  }
+}
+
+.form-type-checkbox,
+.form-type-radio {
+  label {
+    font-weight: 400;
+  }
+}
+
+.fieldset-legend {
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: rem(8px);
+}
