@@ -7,8 +7,7 @@
   <title>Dennholm studio -</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="../css/animations.css?" media="all" />
-  <link rel="stylesheet" href="../css/jquery.multiscroll.css?" media="all" />
+
   <link rel="stylesheet" href="../css/styles.css?" media="all" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.1/TweenMax.min.js"></script>
@@ -17,64 +16,68 @@
 <body class="landing-page">
   <div id="barba-wrapper" class="wrapper">
     <div class="barba-container" data-namespace="homepage">
-      <div class="landing">
-        <div class="landing__left ms-left ms-easing">
-          <div class="ms-group">
-            <div class="ms-section bg--pink">
-              <div class="group-content with-image title-center">
-                <h1 class="title--center">Steven<br> John<br> Clark</h1>
-                <img src="images/landing1.png">
-                <a href="/styleguide/sjc.html" class="link-more nav prev">Prev</a>
+      <div class="landing_wrap">
+        <div class="landing">
+          <div class="landing__left ms-left ms-easing">
+            <div class="ms-group">
+              <div class="ms-section bg--pink">
+                <div class="group-content with-image title-center">
+                  <h1 class="title--center">Steven<br> John<br> Clark</h1>
+                  <img src="images/landing1.png">
+                  <a href="../dh-styleguide/styleguide/sjc.html" class="link-more nav prev">Prev</a>
+                </div>
               </div>
-            </div>
-            <div class="ms-section bg--pink-dark">
-              <div class="group-content">
-                <h2 class="text--right"><span class="title--center">Steven<br> John<br> Clark</span>
+              <div class="ms-section bg--pink-dark">
+                <div class="group-content">
+                  <h2 class="text--right"><span class="title--center">Steven<br> John<br> Clark</span>
             <br> <span class="morphext-wrap">is the <span class="js-rotating">sculptor, product, sculptor, product</span></span></h2>
+                </div>
+              </div>
+              <div class="ms-section bg--yellow">
+                <div class="group-content">
+                  <h3><a href="mailto:studio@stevenjohnclark.com">studio@stevenjohnclark.com</a></h3>
+                  <div class="box-info">
+                    <p>4/74 Newlands Road,
+                      <br>Reservoir
+                      <br>Melbourne, Australia 3073</p>
+                    <p><b>Studio visits are subject to appointment</b>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="ms-section bg--yellow">
-              <div class="group-content">
-                <h3><a href="mailto:studio@stevenjohnclark.com">studio@stevenjohnclark.com</a></h3>
-                <div class="box-info">
-                  <p>4/74 Newlands Road,
-                    <br>Reservoir
-                    <br>Melbourne, Australia 3073</p>
-                  <p><b>Studio visits are subject to appointment</b>
-                  </p>
+          </div>
+
+          <div class="landing__right ms-right ms-easing">
+            <div class="ms-group">
+              <div class="ms-section bg--blue">
+                <div class="group-content with-image">
+                  <h1 class="title--bottom">denHolm</h1>
+                  <img src="images/landing2.png">
+                  <a href="../dh-styleguide/styleguide/denholm.html" class="link-more nav next">Next</a>
+                </div>
+              </div>
+              <div class="ms-section bg--pink-dark">
+                <div class="group-content">
+                  <h2 class="text--left"><span class="title--bottom">denHolm</span><br> is the<br> product
+            <br> line
+          </h2>
+                </div>
+              </div>
+              <div class="ms-section bg--yellow">
+                <div class="group-content">
+                  <h3><a href="mailto:studio@den-holm.com"> studio@den-holm.com</a></h3>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="landing__right ms-right ms-easing">
-          <div class="ms-group">
-            <div class="ms-section bg--blue">
-              <div class="group-content with-image">
-                <h1 class="title--bottom">denHolm</h1>
-                <img src="images/landing2.png">
-                <a href="/styleguide/denholm.html" class="link-more nav next">Next</a>
-              </div>
-            </div>
-            <div class="ms-section bg--pink-dark">
-              <div class="group-content">
-                <h2 class="text--left"><span class="title--bottom">denHolm</span><br> is the<br> product
-            <br> line
-          </h2>
-              </div>
-            </div>
-            <div class="ms-section bg--yellow">
-              <div class="group-content">
-                <h3><a href="mailto:studio@den-holm.com"> studio@den-holm.com</a></h3>
-              </div>
-            </div>
+        <div class="next-page">
+          <div class="arrow-btn arrow-left"><a href="../dh-styleguide/styleguide/sjc.html" class="prev">Prev</a>
+          </div>
+          <div class="arrow-btn arrow-right"><a href="../dh-styleguide/styleguide/denholm.html" class="next">Next</a>
           </div>
         </div>
-      </div>
-      <div class="next-page">
-        <div class="arrow-btn arrow-left">Prev</div>
-        <div class="arrow-btn arrow-right">Next</div>
       </div>
     </div>
   </div>
@@ -88,6 +91,7 @@
   <script src="../js/lib/pagetransitions.js?"></script>
   <script src="../js/lib/jquery.easings.min.js?"></script>
   <script src="../js/lib/jquery.multiscroll.min.js?"></script>
+  <script src="../js/functions.js?"></script>
   <script src="../js/nextprev.js?"></script>
   <script src="../js/script.js?"></script>
 </body>

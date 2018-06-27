@@ -6,8 +6,7 @@
     <title>{{ site_title }} - {% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="../css/animations.css?{{ cacheBuster }}" media="all" />
-    <link rel="stylesheet" href="../css/jquery.multiscroll.css?{{ cacheBuster }}" media="all" />
+    {# <link rel="stylesheet" href="../css/animations.css?{{ cacheBuster }}" media="all" /> #}
     <link rel="stylesheet" href="../css/styles.css?{{ cacheBuster }}" media="all" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?{{ cacheBuster }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.1/TweenMax.min.js"></script>
@@ -16,10 +15,6 @@
     <div id="barba-wrapper" class="wrapper">
       <div class="barba-container" data-namespace="homepage">
         {% include '../components/landing.twig' %}
-        <div class="next-page">
-          <div class="arrow-btn arrow-left">Prev</div>
-          <div class="arrow-btn arrow-right">Next</div>
-        </div>
       </div>
     </div>
   <script src="../js/lib/slick.min.js?{{ cacheBuster }}"></script>
@@ -32,6 +27,7 @@
   <script src="../js/lib/pagetransitions.js?{{ cacheBuster }}"></script>
   <script src="../js/lib/jquery.easings.min.js?{{ cacheBuster }}"></script>
   <script src="../js/lib/jquery.multiscroll.min.js?{{ cacheBuster }}"></script>
+  <script src="../js/functions.js?{{ cacheBuster }}"></script>
   <script src="../js/nextprev.js?{{ cacheBuster }}"></script>
   <script src="../js/script.js?{{ cacheBuster }}"></script>
 </body>

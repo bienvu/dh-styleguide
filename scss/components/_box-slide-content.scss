@@ -2,26 +2,53 @@
   max-width: 600px;
   margin: 0 auto;
 
-  .slick-prev {
-    display: none !important;
+  @include susy-media(mobileOnly) {
+    margin: 0 10px;
   }
-  
+
   &__item {
-    display: flex !important;
-    align-items: center;
+    position: relative;
+
+    @include susy-media(tablet) {
+      display: flex !important;
+      align-items: center;
+      min-width: 600px;
+    }
 
     h2 {
-      font-size: 24px;
+      @include susy-media(mobileOnly) {
+        position: absolute;
+        top: 0;
+        left: 60px;
+        font-size: 40px;
+      }
+
+      @include susy-media(tablet) {
+        font-size: 24px;
+      }
     }
   }
 
   &__body {
-    width: 30%;
-    margin-left: 67px;
-    max-width: 150px;
+    @include susy-media(tablet) {
+      width: 30%;
+      margin-left: 67px;
+      max-width: 150px;
+    }
+  }
+
+  &__image {
+    line-height: 0;
+
+    @include susy-media(mobileOnly) {
+      margin-top: 25px;
+      margin-bottom: 30px;
+    }
   }
 
   img {
-    max-width: 395px;
+    @include susy-media(tablet) {
+      max-width: 395px;
+    }
   }
 }

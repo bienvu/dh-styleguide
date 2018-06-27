@@ -14,11 +14,16 @@ input[type='submit'] {
   box-sizing: border-box;
   color: $text-color;
   font-weight: 400;
-  padding: 8px;
-  font-size: 12px;
+  padding: 13px 11px;
+  font-size: 14px;
   text-transform: capitalize;
   transition: all .3s ease-in-out;
   width: 100%;
+
+  @include susy-media(tablet) {
+    font-size: 12px;
+    padding: 8px;
+  }
 
   &::-ms-clear {
     display: none;
@@ -93,11 +98,16 @@ input[type='text'],
 .form-textarea {
   @extend %form-text;
   height: auto;
-  min-height: 188px;
+  min-height: 245px;
   border: 1px solid #e0b8b7;
   box-shadow: 0 0 1px 1px #e0b8b7;
-  margin-top: 33px;
+  margin-top: 45px;
   margin-bottom: 8px;
+
+  @include susy-media(tablet) {
+    margin-top: 33px;
+    min-height: 188px;
+  }
 }
 
 .form-item,
@@ -132,8 +142,8 @@ select {
   background-repeat: no-repeat;
   border: 0;
   border-bottom: 2px solid $text-color;
-  padding: 8px;
-  font-size: 12px;
+  padding: 13px 12px;
+  font-size: 14px;
   text-transform: capitalize;
   margin-bottom: rem(10px);
   padding: rem(5px 25px 5px 10px);
@@ -141,7 +151,13 @@ select {
   border-radius: 0;
   width: 100%;
   margin: 0;
-  height: 33px;
+  height: 45px;
+
+  @include susy-media(tablet) {
+    font-size: 12px;
+    padding: 8px;
+    height: 33px;
+  }
 
   &:focus,
   &:hover,

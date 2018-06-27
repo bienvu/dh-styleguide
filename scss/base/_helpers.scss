@@ -130,6 +130,9 @@
   left: 127px;
   z-index: 99;
 
+  &.bg-active {
+    background: none;
+  }
   // @include susy-media(desktopSuperwide) {
   //   font-size: 86px;
   //   top: 50px;
@@ -178,6 +181,10 @@
   left: 175px;
   z-index: 99;
 
+  &.bg-active {
+    background: none;
+  }
+
   // @include susy-media(desktopSuperwide) {
   //   font-size: 86px;
   //   top: 50px;
@@ -223,7 +230,11 @@
 .red-button {
   position: absolute;
   left: 40px;
-  top: 50px;
+  top: 25px;
+
+  @include susy-media(tablet) {
+    top: 50px;
+  }
 
   a {
     background: $red;

@@ -78,75 +78,46 @@ document.addEventListener("DOMContentLoaded", function() {
   var Homepage = Barba.BaseView.extend({
     namespace: 'homepage',
     onEnter: function() {
-      $.fn.multiscroll.destroy();
-      $.fn.multiscroll.build();
+      var $widthWd = $( window ).width();
+      if($widthWd > 768) {
+        $.fn.multiscroll.destroy();
+        $.fn.multiscroll.build();
+      }
     },
     onEnterCompleted: function() {
-      if($('.landing').length) {
-        $('.landing').multiscroll({
-          verticalCentered: true,
-          scrollingSpeed: 400,
-          easing: 'easeInQuart',
-          menu: false,
-          navigation: false,
-          loopBottom: false,
-          loopTop: true,
-          css3: true,
-          paddingTop: 0,
-          paddingBottom: 0,
-          normalScrollElements: null,
-          keyboardScrolling: true,
-          touchSensitivity: 5
-        });
-      }
-
-      // Rotate text.
-      if($(".js-rotating").length) {
-        $(".js-rotating").Morphext({
-          animation: "bounceInDown", // Overrides default "bounceIn"
-          speed: 2000, // Overrides default 2000
-        });
-      }
-    },
-    onLeave: function() {
-        // A new Transition toward a new page has just started.
-    },
-    onLeaveCompleted: function() {
-        // The Container has just been removed from the DOM.
+      $('window').scrollPagge();
+      $('window').rotateText();
     }
   });
 
   var denHolm = Barba.BaseView.extend({
     namespace: 'denholm',
     onEnter: function() {
-      // Slider
-      $('.js-slide').each(function() {
-        $(this).not('.slick-initialized').slick({
-          infinite: true,
-          autoplay: true,
-        });
-      });
-
-      // Slider Circle
-      $('.js-slide-circle').each(function() {
-        $(this).not('.slick-initialized').slick({
-          infinite: true,
-          autoplay: true,
-        });
-      });
+      $('window').showHideFunction();
+      $('window').sliderFunction();
+      $('body').addClass('is-home');
+      $('.js-logo').addClass('is-active');
     },
     onEnterCompleted: function() {
-      $('.js-change-page').each(function() {
-        var $this = $(this);
-        $this.click(function (ev) {
-          if (!$this.hasClass('is-active')) {
-            $('.js-change-page').removeClass('is-active');
-            $(this).addClass('is-active');
-            var page  = $(ev.target).attr("data-page-name");
-            var trans = $(ev.target).attr("data-page-trans");
-            $(".screen").page().transition(page, trans);
-          }
-        });
+      $('window').pagesTransition();
+      $('.js-logo').click(function() {
+        $("body").addClass('is-home');
+      });
+    }
+  });
+
+  var sjc = Barba.BaseView.extend({
+    namespace: 'sjc',
+    onEnter: function() {
+      $('window').showHideFunction();
+      $('window').sliderFunction();
+      $('body').addClass('is-home');
+      $('.js-logo').addClass('is-active');
+    },
+    onEnterCompleted: function() {
+      $('window').pagesTransition();
+      $('.js-logo').click(function() {
+        $("body").addClass('is-home');
       });
     }
   });
@@ -154,37 +125,14 @@ document.addEventListener("DOMContentLoaded", function() {
   var objectSpecific = Barba.BaseView.extend({
     namespace: 'object-specific',
     onEnter: function() {
-      // Slider
-      $('.js-slide').each(function() {
-        $(this).not('.slick-initialized').slick({
-          infinite: true,
-          autoplay: true,
-        });
-      });
-
-      // Slider Circle
-      $('.js-slide-circle').each(function() {
-        $(this).not('.slick-initialized').slick({
-          infinite: true,
-          autoplay: true,
-        });
-      });
+      $('window').showHideFunction();
+      $('window').sliderFunction();
+      $('.js-logo').addClass('is-active');
     },
     onEnterCompleted: function() {
-      $('.js-change-page').each(function() {
-        var $this = $(this);
-        $this.click(function (ev) {
-          if (!$this.hasClass('is-active')) {
-            $('.js-change-page').removeClass('is-active');
-            $(this).addClass('is-active');
-            var page  = $(ev.target).attr("data-page-name");
-            var trans = $(ev.target).attr("data-page-trans");
-            if ($(".screen").page().fetch(page) === null)
-                $(".screen").page().shake();
-            else
-                $(".screen").page().transition(page, trans);
-          }
-        });
+      $('window').pagesTransition();
+      $('.js-logo').click(function() {
+        $("body").addClass('is-home');
       });
     }
   });
@@ -192,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Don't forget to init the view!
   Homepage.init();
   denHolm.init();
+  sjc.init();
   objectSpecific.init();
   Barba.Pjax.getTransition = function() {
     return MovePage;

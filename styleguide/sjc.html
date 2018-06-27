@@ -14,38 +14,55 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.1/TweenMax.min.js"></script>
 </head>
 
-<body class="denholm">
+<body class="is-home">
   <div id="barba-wrapper" class="wrapper">
-    <div class="barba-container page-transition" data-namespace="denholm">
+    <div class="barba-container page-transition" data-namespace="sjc">
       <div class="page-transition__wrap">
-        <div class="page-transition__logo"><a href="#" class="js-change-page sjc-logo is-active" data-page-name="home" data-page-trans="slide-in-from-bottom">Steven<br> John<br> Clark</a>
+        <div class="page-transition__logo"><a href="#" class="js-change-page js-logo sjc-logo is-active" data-page-name="home" data-page-trans="slide-in-from-bottom">Steven<br> John<br> Clark</a>
         </div>
-        <div class="page-transition__nav">
-          <ul>
-            <li class="bio nav"><span class="js-change-page" data-page-name="bio" data-page-trans="slide-in-from-right">BIO</span>
-            </li>
-            <li class="top nav"><span class="js-change-page" data-page-name="collaboorations" data-page-trans="slide-in-from-bottom">Collaboorations</span>
-            </li>
-            <li class="expand exhibit nav"><span class="js-change-page" data-page-name="exhibit" data-page-trans="slide-in-from-left">Exhibit</span>
+        <div class="red-button back-to-home">
+          <a href="../dh-styleguide/styleguide/landing.html"></a>
+        </div>
+        <div class="page-transition__menu-mobile">
+          <span class="js-change-page js-logo back-home is-active" data-page-name="home" data-page-trans="slide-in-from-bottom"></span>
+          <span class="menu js-toggle-menu">Menu</span>
+        </div>
+        <div class="page-transition__menu">
+          <div class="page-transition__inner">
+            <div class="page-transition__nav">
               <ul>
-                <li><span class="js-change-page" data-page-name="early1" data-page-trans="slide-in-from-left">Early</span>
+                <li class="bio nav"><span class="js-change-page" data-page-name="bio" data-page-trans="slide-in-from-right">BIO</span>
                 </li>
-                <li><span class="js-change-page" data-page-name="early2" data-page-trans="slide-in-from-left">Early</span>
+                <li class="top nav"><span class="js-change-page" data-page-name="collaboorations" data-page-trans="slide-in-from-bottom">Collaboorations</span>
                 </li>
-                <li><span class="js-change-page" data-page-name="early3" data-page-trans="slide-in-from-left">Early</span>
+                <li class="expand exhibit nav"><span class="js-change-page" data-page-name="exhibit" data-page-trans="slide-in-from-left">Exhibit</span>
+                  <ul>
+                    <li><span class="js-change-page" data-page-name="early1" data-page-trans="slide-in-from-left">Early</span>
+                    </li>
+                    <li><span class="js-change-page" data-page-name="early2" data-page-trans="slide-in-from-left">Early</span>
+                    </li>
+                    <li><span class="js-change-page" data-page-name="early3" data-page-trans="slide-in-from-left">Early</span>
+                    </li>
+                  </ul>
                 </li>
               </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="page-transition__footer">
-          <div class="container">
-            <ul class="page-transition__footer__inner">
-              <li><span class="js-change-page nav" data-page-name="enquiries" data-page-trans="slide-in-from-top">Enquiries</span>
-              </li>
-              <li class="instagram"><a href="https://www.instagram.com/" target="_blank">Instagram</a>
-              </li>
-            </ul>
+            </div>
+            <div class="page-transition__footer">
+              <div class="container">
+                <ul class="page-transition__footer__inner">
+                  <li><span class="js-change-page nav" data-page-name="enquiries" data-page-trans="slide-in-from-top">Enquiries</span>
+                  </li>
+                  <li class="instagram"><a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="page-transition__link">
+              <div class="red-button">
+                <a href="landing.html"></a>
+              </div>
+              <span>denHolm Sttudios</span>
+            </div>
           </div>
         </div>
       </div>
@@ -54,9 +71,6 @@
           <div>
             <div class="page-transition__item home" data-jquery-page-name="home">
               <div class="content-inner">
-                <div class="red-button">
-                  <a href="landing.html"></a>
-                </div>
                 <div class="box-video">
                   <video width="1280" height="720" muted="muted" loop="loop" autoplay="" preload="auto" id="theVideo" playsinline="">
                     <source src="../images/video.mp4" type="video/mp4">
@@ -66,7 +80,7 @@
             </div>
             <div class="page-transition__item exhibit" data-jquery-page-name="exhibit">
               <div class="content-inner">
-                <div class="box-slide box-slide__exhibit">
+                <div class="box-slide box-slide__exhibit has-info">
                   <div class="box-slide__inner js-slide ">
                     <div class="box-slide__item">
                       <img src="images/slide2.png">
@@ -97,28 +111,36 @@
                 <div class="box-slide-content">
                   <div class="box-slide-content__iiner js-slide">
                     <div class="box-slide-content__item">
-                      <img src="images/commission1.png">
+                      <div class="box-slide-content__image">
+                        <img src="images/commission1.png">
+                      </div>
                       <div class="box-slide-content__body">
                         <h2>Name</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                       </div>
                     </div>
                     <div class="box-slide-content__item">
-                      <img src="images/commission1.png">
+                      <div class="box-slide-content__image">
+                        <img src="images/commission1.png">
+                      </div>
                       <div class="box-slide-content__body">
                         <h2>Name</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                       </div>
                     </div>
                     <div class="box-slide-content__item">
-                      <img src="images/commission1.png">
+                      <div class="box-slide-content__image">
+                        <img src="images/commission1.png">
+                      </div>
                       <div class="box-slide-content__body">
                         <h2>Name</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                       </div>
                     </div>
                     <div class="box-slide-content__item">
-                      <img src="images/commission1.png">
+                      <div class="box-slide-content__image">
+                        <img src="images/commission1.png">
+                      </div>
                       <div class="box-slide-content__body">
                         <h2>Name</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -218,7 +240,7 @@
             </div>
             <div class="page-transition__item early1" data-jquery-page-name="early1">
               <div class="content-inner">
-                <div class="box-slide box-slide__exhibit">
+                <div class="box-slide box-slide__exhibit has-info">
                   <div class="box-slide__inner js-slide ">
                     <div class="box-slide__item">
                       <img src="images/slide2.png">
@@ -246,7 +268,7 @@
             </div>
             <div class="page-transition__item early2" data-jquery-page-name="early2">
               <div class="content-inner">
-                <div class="box-slide box-slide__exhibit">
+                <div class="box-slide box-slide__exhibit has-info">
                   <div class="box-slide__inner js-slide ">
                     <div class="box-slide__item">
                       <img src="images/slide2.png">
@@ -274,7 +296,7 @@
             </div>
             <div class="page-transition__item early3" data-jquery-page-name="early3">
               <div class="content-inner">
-                <div class="box-slide box-slide__exhibit">
+                <div class="box-slide box-slide__exhibit has-info">
                   <div class="box-slide__inner js-slide ">
                     <div class="box-slide__item">
                       <img src="images/slide2.png">
@@ -313,6 +335,7 @@
   <script src="../js/lib/pagetransitions.js?"></script>
   <script src="../js/lib/jquery.easings.min.js?"></script>
   <script src="../js/lib/jquery.multiscroll.min.js?"></script>
+  <script src="../js/functions.js?"></script>
   <script src="../js/nextprev.js?"></script>
   <script src="../js/script.js?"></script>
 </body>

@@ -12,21 +12,42 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?{{ cacheBuster }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.1/TweenMax.min.js"></script>
   </head>
-  <body class="denholm">
+  <body class="is-home">
     <div id="barba-wrapper" class="wrapper">
       <div class="barba-container page-transition" data-namespace="denholm">
         <div class="page-transition__wrap">
-          <div class="page-transition__logo"><a href="#" class="js-change-page denholm-logo is-active" data-page-name="denholm" data-page-trans="slide-in-from-bottom">denHolm</a></div>
-          <div class="page-transition__nav">
-            <div class="js-change-page what nav" data-page-name="what" data-page-trans="slide-in-from-right">What?</div>
-            <div class="js-change-page objects nav" data-page-name="objects" data-page-trans="slide-in-from-bottom">Objects</div>
-            <div class="js-change-page commissions nav" data-page-name="commissions" data-page-trans="slide-in-from-left">Commissions</div>
+          <div class="page-transition__logo"><a href="#" class="js-change-page js-logo denholm-logo is-active" data-page-name="home" data-page-trans="slide-in-from-bottom">denHolm</a></div>
+          <div class="red-button back-to-home"><a href="../dh-styleguide/styleguide/landing.html"></a></div>
+          <div class="page-transition__menu-mobile">
+            <span  class="js-change-page js-logo back-home is-active" data-page-name="home" data-page-trans="slide-in-from-bottom"></span>
+            <span class="menu js-toggle-menu">Menu</span>
           </div>
-          <div class="page-transition__footer">
-            <div class="container">
-              <div class="page-transition__footer__inner">
-                <div class="js-change-page nav" data-page-name="enquiries" data-page-trans="slide-in-from-top">Enquiries</div>
-                <div class="instagram"><a href="https://www.instagram.com/" target="_blank">Instagram</a></div>
+          <div class="page-transition__menu">
+            <div class="page-transition__inner">
+              <div class="page-transition__nav">
+                <ul>
+                <li class="left nav">
+                  <span class="js-change-page" data-page-name="what" data-page-trans="slide-in-from-right">What?</span>
+                </li>
+                <li class="top nav">
+                  <span class="js-change-page" data-page-name="objects" data-page-trans="slide-in-from-bottom">Objects</span>
+                </li>
+                <li class="right nav"><span class="js-change-page" data-page-name="commissions" data-page-trans="slide-in-from-left">Commissions</span></li>
+                </ul>
+              </div>
+              <div class="page-transition__footer">
+                <div class="container">
+                  <ul class="page-transition__footer__inner">
+                    <li><span class="js-change-page nav" data-page-name="enquiries" data-page-trans="slide-in-from-top">Enquiries</span></li>
+                    <li class="instagram" ><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="page-transition__link">
+                <div class="red-button">
+                  <a href="landing.html"></a>
+                </div>
+                <span>denHolm Sttudios</span>
               </div>
             </div>
           </div>
@@ -34,7 +55,7 @@
         <div class="page-transition__content">
           <div class="screen">
             <div>
-              <div class="page-transition__item denholm" data-jquery-page-name="denholm">
+              <div class="page-transition__item denholm home" data-jquery-page-name="home">
                 <div class="content-inner">
                 {% include '../components/denholm-home.twig' %}
                 </div>
@@ -72,6 +93,7 @@
     <script src="../js/lib/pagetransitions.js?{{ cacheBuster }}"></script>
     <script src="../js/lib/jquery.easings.min.js?{{ cacheBuster }}"></script>
     <script src="../js/lib/jquery.multiscroll.min.js?{{ cacheBuster }}"></script>
+    <script src="../js/functions.js?{{ cacheBuster }}"></script>
     <script src="../js/nextprev.js?{{ cacheBuster }}"></script>
     <script src="../js/script.js?{{ cacheBuster }}"></script>
   </body>

@@ -1,9 +1,11 @@
 .form-enquiries {
   &__left,
   &__right {
-    width: 50%;
-    float: left;
-    padding: 0 50px;
+    @include susy-media(tablet) {
+      width: 50%;
+      float: left;
+      padding: 0 50px;
+    }
   }
 
   .form-wrap {
@@ -15,7 +17,7 @@
 
 .time-local {
   text-align: center;
-  font-size: 12px;
+  // font-size: 12px;
   margin-bottom: 75px;
   font-weight: 700;
 }

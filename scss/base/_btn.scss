@@ -8,10 +8,10 @@
   box-shadow: none;
   display: inline-block;
   text-transform: capitalize;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1;
   outline: none;
-  padding: 8px 20px;
+  padding: 9px 25px;
   text-align: center;
   text-shadow: none;
   transition: all .3s ease;
@@ -20,6 +20,11 @@
   cursor: pointer;
   font-weight: 700;
   outline: 0;
+
+  @include susy-media(tablet) {
+    font-size: 12px;
+    padding: 8px 20px;
+  }
 
   &:active,
   &:hover {
